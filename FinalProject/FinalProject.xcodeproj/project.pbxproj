@@ -15,6 +15,7 @@
 		EF2E65801F292A2D00330E0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF2E657E1F292A2D00330E0D /* LaunchScreen.storyboard */; };
 		EF2E658B1F292A2D00330E0D /* FinalProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2E658A1F292A2D00330E0D /* FinalProjectTests.swift */; };
 		EF2E65961F292A2D00330E0D /* FinalProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2E65951F292A2D00330E0D /* FinalProjectUITests.swift */; };
+		EF77EE7B1F2A423A00985560 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77EE7A1F2A423A00985560 /* Converter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		EF2E65911F292A2D00330E0D /* FinalProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinalProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF2E65951F292A2D00330E0D /* FinalProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalProjectUITests.swift; sourceTree = "<group>"; };
 		EF2E65971F292A2D00330E0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF77EE7A1F2A423A00985560 /* Converter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				EF2E65721F292A2D00330E0D /* AppDelegate.swift */,
 				EF2E65741F292A2D00330E0D /* ViewController.swift */,
 				EF2E65761F292A2D00330E0D /* Main.storyboard */,
+				EF77EE7A1F2A423A00985560 /* Converter.swift */,
 				EF2E657C1F292A2D00330E0D /* Assets.xcassets */,
 				EF2E657E1F292A2D00330E0D /* LaunchScreen.storyboard */,
 				EF2E65811F292A2D00330E0D /* Info.plist */,
@@ -267,6 +270,7 @@
 			files = (
 				EF2E65751F292A2D00330E0D /* ViewController.swift in Sources */,
 				EF2E65731F292A2D00330E0D /* AppDelegate.swift in Sources */,
+				EF77EE7B1F2A423A00985560 /* Converter.swift in Sources */,
 				EF2E657B1F292A2D00330E0D /* FinalProject.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,6 +524,7 @@
 				EF2E659C1F292A2D00330E0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EF2E659D1F292A2D00330E0D /* Build configuration list for PBXNativeTarget "FinalProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +533,7 @@
 				EF2E659F1F292A2D00330E0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EF2E65A01F292A2D00330E0D /* Build configuration list for PBXNativeTarget "FinalProjectUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +542,7 @@
 				EF2E65A21F292A2D00330E0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
