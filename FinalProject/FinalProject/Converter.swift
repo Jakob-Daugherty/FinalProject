@@ -28,9 +28,52 @@ class Converter: NSObject {
     }
     
     func convert() {
-        self.inputText = rawInput + "" + inputSuffix
-        self.outputText = rawInput + "" + outputSuffix
+        self.inputText = rawInput + " " + inputSuffix
+        let rawValue = Double(rawInput)
+        var outValue: Double!
+        if rawValue != nil {
+            if self.conversion == Conversion.FtoC {
+                outValue = fahrenheitToCelcius(temperature: rawValue!)
+            }
+            if self.conversion == Conversion.CtoF {
+                outValue = celciusToFahrenheit(temperature: rawValue!)
+            }
+            if self.conversion == Conversion.MtoKm {
+                outValue = milesToKilometers(miles: rawValue!)
+            }
+            if self.conversion == Conversion.KmtoM {
+                outValue = kilometersToMiles(kilometers: rawValue!)
+            }
+            self.outputText = String(format: "%.2f", outValue) + "" + outputSuffix
+        } else {
+            self.outputText = rawInput + " " + outputSuffix
+        }
         
+        
+    }
+    
+    func fahrenheitToCelcius(temperature: Double) -> Double {
+        var celcius: Double
+        celcius = (temperature - 32) * 5/9
+        return celcius
+    }
+    
+    func celciusToFahrenheit(temperature: Double) -> Double {
+        var fahrenheit: Double
+        fahrenheit = temperature * 1.8 + 32
+        return fahrenheit
+    }
+    
+    func milesToKilometers(miles: Double) -> Double {
+        var kilometers: Double
+        kilometers = miles * 1.6
+        return kilometers
+    }
+    
+    func kilometersToMiles(kilometers: Double) -> Double {
+        var miles: Double
+        miles = kilometers * 0.6
+        return miles
     }
     
     func uiHandle(newValue: String) {
@@ -71,12 +114,12 @@ class Converter: NSObject {
             self.outputSuffix = "°F"
         case 3:
             self.conversion = Conversion.MtoKm
-            self.inputSuffix = " M"
-            self.outputSuffix = "Km"
+            self.inputSuffix = "mi"
+            self.outputSuffix = "km"
         case 4:
             self.conversion = Conversion.KmtoM
-            self.inputSuffix = "Km"
-            self.outputSuffix = " M"
+            self.inputSuffix = "km"
+            self.outputSuffix = "mi"
         //default is to go to FtoC conversion
         default:
             self.conversion = Conversion.FtoC
